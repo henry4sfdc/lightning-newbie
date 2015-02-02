@@ -1,0 +1,12 @@
+# Site settings
+title: Lightning Components Newbie Questions
+email: reid.carlberg@salesforce.com
+description: > # this means to ignore newlines until "baseurl:"
+  Have a newbie question you'd like answered? Drop me a note.
+baseurl: "/lightning-newbie" # the subpath of your site, e.g. /blog/
+url: "http://reidcarlberg.github.io/" # the base hostname & protocol for your site
+twitter_username: ReidCarlberg
+github_username:  reidcarlberg
+
+# Build settings
+markdown: kramdown
