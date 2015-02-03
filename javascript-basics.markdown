@@ -4,11 +4,13 @@ layout: default
 
 #Javascript Basics#
 
-**UI, Javascript Controller**
+**Setting Attributes on [Init](#init). User Interactions with [Buttons](#buttons)**
 
 Buttons communicate with the rest of the component using events. If you're using an Aura Framework button, there's a custom event called "press". If you're using a regular HTML5 button, you can use the onclick event. 
 
-##Step 1: Settings Attributes on Init##
+<a name="init"></a>
+
+##Step 1: Setting Attributes on Init##
 
 The Javascript controller is an integral part of your Lightning Component.  Your component is aware of the controller, and can call the Javascript functions you define in the controller.  Likewise, those functions in your controller can update values expressed in attributes.
 
@@ -58,7 +60,9 @@ Or like this on your mobile device running Salesforce1.
 
 <img src="images/lightning-component-salesforce1-javascript-controller.png" width="300px" />
 
-##Step 2: More Interesting Data##
+<a name="buttons"></a>
+
+##Step 2: User Interactions with Buttons##
 
 Init events are great, but a lot of time you really want to handle user gestures, like clicking a button. Aura has a few built in libraries, here
 

@@ -10,15 +10,15 @@ Like a lot of you, I recently started down the path of learning about Lightning 
 
 Subtopics available on the right.
   
-[Basics](basics.html)
+[Basics](basics.html) - Getting started.
 
-[Hello Salesforce1](hello-salesforce1.html)
+[Hello Salesforce1](hello-salesforce1.html) - Get your app on your phone.
 
-[Attributes](attributes.html)
+[Attributes](attributes.html) - Start working with data.
 
-[Javascript Basics](javascript-basics.html)
+[Javascript Basics](javascript-basics.html) - Starting working with code.
 
-[Apex Integration](apex-integration.html)
+[Apex Integration](apex-integration.html) - Integrate with the rest of your org.
 
-[Custom Events](custom-events.html)
+[Events](events.html) - Communicate within and between components.
 

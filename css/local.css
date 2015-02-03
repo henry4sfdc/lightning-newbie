@@ -32,3 +32,7 @@ h2 {
 .right-nav ol > li {
     padding: 4px 0;
 }
+
+.right-nav ul > li {
+    margin-left: -20px;
+}
