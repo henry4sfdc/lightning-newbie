@@ -3,3 +3,24 @@ body {
   padding-top: 50px;
   padding-bottom: 20px;
 }
+
+img {
+	border-style: solid;
+    border-width: medium;
+    border-color: gray;
+	display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.right-nav {
+    padding-top: 20px;
+}
+
+.right-nav ol {
+    margin: 10px 10px 0 40px;
+}
+
+.right-nav ol > li {
+    padding: 4px 0;
+}

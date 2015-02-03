@@ -2,9 +2,9 @@
 layout: default
 ---
 
-#Hello World#
+#Hello Salesforce1#
 
-###Create Your First Lightning App. Create Your First Lightning Component. Refactor Your Component. Create a Lightning Component Tab. Deploy to Your Salesforce1 Mobile App###
+**Create Your First Lightning App. Create Your First Lightning Component. Refactor Your Component. Create a Lightning Component Tab. Deploy to Your Salesforce1 Mobile App**
 
 Hello World is really two things: Hello World on your desktop browser and Hello World on your Salesforce1 mobile app. The good news is that, by design, these two things are mostly the same. Once you have what you need for your desktop, you only need a few more clicks to make that same component ready for Salesforce1.
 
