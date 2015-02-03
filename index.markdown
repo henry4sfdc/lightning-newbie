@@ -6,6 +6,8 @@ layout: default
   
 [Basics](basics.html)
 
-[Hello World](hello-world.html)
+[Hello Salesforce1](hello-salesforce1.html)
+
+[Attributes](attributes.html)
 
 

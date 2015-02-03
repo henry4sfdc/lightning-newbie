@@ -200,5 +200,4 @@ Tap on that menu item, Lightning Blog in my case, and you'll see the components 
 
 <img src="images/lightning-blog-rendered.png" width="300px" />
 
-
 "HOLY WOW!" I can hear you exclaim. "But, the headline on my Salesforce1 mobile version of Lightning Blog isn't red!" You are correct. The Lightning App we defined and previews on the desktop specified red in its CSS.  However, what you're seeing on your Salesforce1 mobile device, isn't the Lightning App.  It's the Lightning Component we created from the tab, and it has no such specification in its CSS.  Yes, the blue we specified in BlogComponent1, which is itself embedded in BlogComponentMaster, comes through because that CSS is specified at the component level.

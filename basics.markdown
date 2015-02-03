@@ -66,6 +66,7 @@ That's it -- you now have a namespace.
 
 
 
+<a name="auradocs"></a>
 
 ###Step 4: Get to Know the Docs ###
 
@@ -79,5 +80,5 @@ The AuraDocs are a little different than the Salesforce docs you might be used t
 
 This is incredibly cool because they aren't just hosted in your org, they're running in your org. That's right: they're an app and they'll update to include the components you build. See the "Reid002" namespace in the screenshot below? Those are the apps, components and events I created while writing this article.
 
-Access your live AuraDocs at https://{YourInstance}.lightning.force.com/auradocs.
+Access your live AuraDocs at <tt>https://{YourInstance}.lightning.force.com/auradocs</tt>.
 
