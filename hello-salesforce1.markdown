@@ -4,7 +4,7 @@ layout: default
 
 #Hello Salesforce1#
 
-**Create Your First Lightning App. Create Your First Lightning Component. Refactor Your Component. Create a Lightning Component Tab. Deploy to Your Salesforce1 Mobile App**
+**Create Your [First Lightning App](#first). Create Your [First Lightning Component](#component). [Refactor Your Component](#refactor). Create a [Lightning Component Tab](#tab). Deploy to Your [Salesforce1 Mobile App](#salesforce1)**
 
 Hello World is really two things: Hello World on your desktop browser and Hello World on your Salesforce1 mobile app. The good news is that, by design, these two things are mostly the same. Once you have what you need for your desktop, you only need a few more clicks to make that same component ready for Salesforce1.
 
@@ -12,7 +12,9 @@ Before You Begin: Make sure you follow the pre-requisites listed in [Basics](bas
 
 A note about namespaces. My namespace for this sample app is "Reid002". Wherever you see "Reid002" you should substitute your own namespace.
 
-##Step 1: Create a Sample App##
+<a name="first"></a>
+
+##Step 1: Create Your First Lightning App##
 
 In your developer console, select File > New > Lightning Application.
 
@@ -50,6 +52,7 @@ When you preview again -- and you might have noticed that the preview automatica
 
 <img src="images/lightning-component-simple-app-red.png" width="600px" />
 
+<a name="component"></a>
 
 ##Step 2: Create a Sample Component, Add to the Sample App##
 
@@ -132,6 +135,8 @@ h1.Reid002BlogComponent1 {
 
 Either of those two work fine as well.
 
+<a name="refactor"></a>
+
 ##Step 4: Create a Parent Component and Refactor##
 
 Refactoring is important at this stage for two reasons. First, it's important to demonstrate that components can be used in other components.  Second, we're going to turn your work into a Salesforce1 App, which requires we work with a component.
@@ -158,6 +163,7 @@ When you reload your preview it should look like this:
 
 <img src="images/lightning-app-master-component.png" width="600px" />
 
+<a name="tab"></a>
 
 ##Step 5: Create a Lightning Component Tab for the new Master Component##
 
@@ -182,7 +188,7 @@ Next is the standard Add to Profile dialog. Since this is a demo, go ahead and l
 
 <img src="images/lightning-component-tab-step-2.png" width="600px" />
 
-
+<a name="salesforce1"></a>
 
 ##Step 6: Add to your Salesforce1 Mobile Navigation##
 
