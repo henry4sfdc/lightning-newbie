@@ -10,4 +10,9 @@ layout: default
 
 [Attributes](attributes.html)
 
+[Javascript Basics](javascript-basics.html)
+
+[Apex Integration](apex-integration.html)
+
+[Custom Events](custom-events.html)
 
