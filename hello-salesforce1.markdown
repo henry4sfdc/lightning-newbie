@@ -4,7 +4,7 @@ layout: default
 
 #Hello Salesforce1#
 
-**Create Your [First Lightning App](#first). Create Your [First Lightning Component](#component). [Refactor Your Component](#refactor). Create a [Lightning Component Tab](#tab). Deploy to Your [Salesforce1 Mobile App](#salesforce1)**
+**Create Your [First Lightning App](#first). Create Your [First Lightning Component](#component) (With [CSS Notes](#css)). [Refactor Your Component](#refactor). Create a [Lightning Component Tab](#tab). Deploy to Your [Salesforce1 Mobile App](#salesforce1)**
 
 Hello World is really two things: Hello World on your desktop browser and Hello World on your Salesforce1 mobile app. The good news is that, by design, these two things are mostly the same. Once you have what you need for your desktop, you only need a few more clicks to make that same component ready for Salesforce1.
 
@@ -85,6 +85,8 @@ And your preview should now look like this:
 
 <img src="images/lightning-app-component-1-red-red.png" width="600px" />
 
+<a name="css"></a>
+
 Huzzah! You have a component rendering in an application, and the component is inheriting the style from the application. That's GREAT unless you don't happen to want everything red. So now let's see if we can change the color by changing the stylesheet on BlogComponent1.
 
 {% highlight css %}
@@ -104,6 +106,8 @@ This lack of change is due to the way CSS works. If you look in your browser's d
 {% endhighlight %}
 
 Notice how the class representing the app level -- Reid002BlogApp1 -- is the last class listed. CSS resolves conflicts in classes by giving precendence to whatever it sees last.  In this case, it colors everything red. You can indicate that the blue command should be treated as more important using the !important designation. 
+
+You can read more about [CSS Specificity and !Important](http://james.padolsey.com/usability/dont-use-important/).
 
 Try updating the Style for Component1 as follows
 
