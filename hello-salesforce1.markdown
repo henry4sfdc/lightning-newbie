@@ -10,7 +10,7 @@ Hello World is really two things: Hello World on your desktop browser and Hello 
 
 Before You Begin: Make sure you follow the pre-requisites listed in [Basics](basics.html).
 
-A note about namespaces. My namespace for this sample app is "Reid002". Wherever you see "Reid002" you should substitute your own namespace.
+A note about namespaces. My namespace for this sample app is "Reid002". Wherever you see "Reid002" you should substitute your own namespace. If you elected to skip creating a namespace despite my exhortations, you should use the default namespace, "c" (lowercase c).
 
 <a name="first"></a>
 

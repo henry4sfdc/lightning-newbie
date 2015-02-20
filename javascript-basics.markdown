@@ -103,7 +103,8 @@ Now you can easily update this sample to be a little more intereting by changing
     setArrayValues : function(component, event, helper) {
         if (!component.get("v.sampleArrayAsObject")) {
             component.set("v.sampleArrayAsObject", 
-                          ["Greetings","From","The","Controller", new Date().toGMTString()]);
+                ["Greetings","From","The","Controller", 
+                    new Date().toGMTString()]);
         } else {
             component.set("v.sampleArrayAsObject", null);
         }

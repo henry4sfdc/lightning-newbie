@@ -15,7 +15,7 @@ Lightning Components have been available in Developer Edition orgs as a beta fea
 
 ###Step 1: Create a developer edition.###
 
-Yes, you should [signup for a new developer edition](https://developer.salesforce.com/signup). You're learning something new, and this walk through won't result in anything particularly useful (other than knowledge), so I recommend not muddying the waters in another org.
+Yes, you should [signup for a new developer edition](https://developer.salesforce.com/signup). You're learning something new, and this walk through won't result in anything particularly useful (other than knowledge), so I recommend not muddying the waters in an org you value.
 
 <a name="enable"></a>
 

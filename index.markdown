@@ -2,9 +2,9 @@
 layout: default_home
 ---
 
-#Salesforce Lightning Newbie Notes#
+#Salesforce Lightning Component Newbie Notes#
 
-Like a lot of you, I recently started down the path of learning Lightning Components. These are my notes based on a series of questions I asked as I went through the docs and tutorials. This is not a cogent use case or app, insead these are simple code snippets illustrating the answers to my questions. 
+Like a lot of you, I recently started down the path of learning Lightning Components. These are my notes and code snippets based on a series of questions I asked as I went through the docs and tutorials. I hope you find them useful.
 
 Questions or comments? Find me on Twitter: [@ReidCarlberg](https://twitter.com/ReidCarlberg).
 
