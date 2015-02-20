@@ -18,7 +18,7 @@ In your Developer Console, navigate to New > Lightning Component, and create a n
 <aura:component >
 	<aura:attribute name="greeting" type="String" default="Hello!" />    
 	<h1>Component 2 - Attributes</h1>
-    <p>{!v.greeting} from Aura.</p>
+	<p>{!v.greeting} from Aura.</p>
 </aura:component>
 {% endhighlight %}
 
@@ -29,8 +29,8 @@ Next, update the Master component to include a reference to the component you ju
 {% highlight html %}
 <aura:component implements="force:appHostable">
 	<h1>Blog Component - Master</h1>
-    <Reid002:BlogComponent1 />
-    <Reid002:BlogComponent2 />
+	<Reid002:BlogComponent1 />
+	<Reid002:BlogComponent2 />
 </aura:component>
 {% endhighlight %}
 
@@ -38,7 +38,7 @@ And reload the preview of your app on either your regular browser or within the 
 
 <img src="images/lightning-component-attributes-hello.png" width="600px" />
 
-You can see that the line <tt>{!v.greeting}</tt> from Aura. renders as exactly what you might have expected: "Hello from Aura."  And because I reloaded the preview from my desktop, where I"m loading the app, all the headlines are red.
+You can see that the line <tt>{!v.greeting}</tt> from Aura. renders as exactly what you might have expected: "Hello from Aura."  And because I reloaded the preview from my desktop, where I'm loading the app, all the headlines are red.
 
 <a name="action"></a>
 
@@ -51,8 +51,8 @@ Update your master component code to look like this:
 {% highlight html %}
 <aura:component implements="force:appHostable">
 	<h1>Blog Component - Master</h1>
-    <Reid002:BlogComponent1 />
-    <Reid002:BlogComponent2 greeting="Wassup" />
+	<Reid002:BlogComponent1 />
+	<Reid002:BlogComponent2 greeting="Wassup" />
 </aura:component>
 {% endhighlight %}
 
@@ -68,7 +68,7 @@ Pretty cool!
 
 Remember when we first took a look at AuraDocs, the supercool, always up to date, self-documenting thing that keeps up with your code? If not, [click here](basics.html#auradocs).
 
-Navigate to your AuraDocs instance, and ind this component in the AuraDocs app.  What do you notice in the "Attributes" section of the documentation?  It should look approximately like this:
+Navigate to your AuraDocs instance, and find this component in the AuraDocs app.  What do you notice in the "Attributes" section of the documentation?  It should look approximately like this:
 
 <img src="images/auradocs-attributes.png" width="600px" />
 
@@ -76,8 +76,11 @@ You might notice that my screenshot has a description. I added this in the compo
 
 {% highlight html %}
 <aura:component >
-	<aura:attribute name="greeting" type="String" default="Hello" description="This is a sample attribute." />    
+	<aura:attribute name="greeting" type="String" default="Hello" 
+		description="This is a sample attribute." />    
 	<h1>Component 2 - Attributes</h1>
-    <p>{!v.greeting} from Aura.</p>
+	<p>{!v.greeting} from Aura.</p>
 </aura:component>
 {% endhighlight %}
+
+##Next: [Javascript Basics](javascript-basics.html)##

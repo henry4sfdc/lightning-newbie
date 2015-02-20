@@ -7,7 +7,7 @@ layout: default
 **Create an [Apex Class](#Apex). Reference the Apex in the [Component](#component). [Refactor](#refactor) Your Controller. Enhance the [SOQL Query](#soql).**
 
 
-Lightning Components is designed to work with the data in your org. The Apex classes you already know and love work directly with the data, and the Javascript controller and helper elements in your Lightning component definition work with the Apex class.
+Lightning Components are designed to work with the data in your org. The Apex classes you already know and love work directly with the data, and the Javascript controller and helper elements in your Lightning component definition work with the Apex class.
 
 <a name="apex"></a>
 
@@ -92,11 +92,13 @@ Looking at the code above, you might be wondering why the Javascript code is sep
 })
 {% endhighlight %}
 
+The helper element of a Lightning Component, among other things, is a useful place to put functions used multiple times.  In this case, since it's used only once, you could easily keep it in the main controller.
+
 <a name="soql"></a>
 
 ##Step 4: Enhance Your SOQL##
 
-If you're used to developing in Apex, you know that SOQL queries can get more complicated than the basics above. For example, maybe you want to get a list of contacts at the same time using a subquery. No problem!
+If you're used to developing in Apex, you know that SOQL queries can get more complicated than the basics above. For example, maybe you want to get a list of contacts at the same time get accounts using a subquery. No problem!
 
 Start by updating your Apex class to includes the subquery.
 
@@ -115,7 +117,7 @@ Next update your component to iterate through the Contacts collection now includ
 <aura:component controller="Reid002.LightningHelper">
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
     <aura:attribute name="twentyAccounts" type="Object" />
-	<h1>Component 5 - Apex Integration</h1>
+    <h1>Component 5 - Apex Integration</h1>
     <p>With the help of an @AuraEnabled Apex class, gets a list of twenty Accounts.</p>
     <ul>
     <aura:iteration items="{!v.twentyAccounts}" var="currentItem">
@@ -137,3 +139,5 @@ When you refresh, your screen should look like this:
 <img src="images/lightning-component-apex-subquery.png" width="600px" />
 
 Note that "Contacts", the name of the relationship in Salesforce, also becomes the name of the javascript object containing the data in your component. Although Salesforce is not generally case-sensitive, Javascript very definitely is. If something isn't showing up, check the case.
+
+##Next: [Events](events.html)##

@@ -6,7 +6,7 @@ layout: default
 
 **Setting Attributes on [Init](#init). User Interactions with [Buttons](#buttons)**
 
-Buttons communicate with the rest of the component using events. If you're using an Aura Framework button, there's a custom event called "press". If you're using a regular HTML5 button, you can use the onclick event. 
+Lightning Components do really cool things with Javascript.
 
 <a name="init"></a>
 
@@ -39,13 +39,13 @@ Once you've saved the component above, you need to create the doInit method in t
 })
 {% endhighlight %}
 
-Yes, this is pretty standard Javascript.  Note that you're setting a value on the view and tha the name matches the attribute you declared on the component.
+Yes, this is pretty standard Javascript.  Note that you're setting a value on the view and that the name matches the attribute you declared on the component.
 
 Update BlogComponentMaster to look like this.
 
 {% highlight html %}
 <aura:component implements="force:appHostable">
-	<h1>Blog Component - Master</h1>
+    <h1>Blog Component - Master</h1>
     <Reid002:BlogComponent1 />
     <Reid002:BlogComponent2 />
     <Reid002:BlogComponent3 />
@@ -64,7 +64,7 @@ Or like this on your mobile device running Salesforce1.
 
 ##Step 2: User Interactions with Buttons##
 
-Init events are great, but a lot of time you really want to handle user gestures, like clicking a button. Aura has a few built in libraries, here
+Init events are great, but a lot of time you really want to handle user gestures, like clicking a button. Aura has a few built in libraries, include a button with an event called "press".
 
 {% highlight html %}
 <aura:component >
@@ -111,4 +111,4 @@ Now you can easily update this sample to be a little more intereting by changing
 })
 {% endhighlight %}
 
-
+##Next: [Apex Integration](apex-integration.html)##

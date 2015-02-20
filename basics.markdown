@@ -6,7 +6,7 @@ layout: default
 
 **Create a [Developer Edition](#de). Enable [Lightning Components](#enable). Setup a [Namespace](#namespace). Locate [the Docs](#auradocs).**
 
-Lightning Components have been available in Developer Edition orgs as a beta feature since the Winter 15 release.  There is more than one way to work with them, but the easiest way to start is to create a new Developer Edition, launch the Developer Console, and use the File > New menu option.  The relevant docs are actually in two places.  You can use the Lightning Developer Guide to start and you can see the AuraDocs app, which dynamically updates in your org as you build applications, components and events.
+Lightning Components have been available in Developer Edition orgs as a beta feature since the Winter 15 release.  There is more than one way to work with them, but the easiest way to start is to create a new Developer Edition, launch the Developer Console, and use the File > New menu option.  The relevant docs are actually in two places.  You can use the [Lightning Developer Guide](http://www.salesforce.com/us/developer/docs/lightning/lightning.pdf) to start and you can access the AuraDocs app as you're working. AuraDocs dynamically updates in your org as you build applications, components and events.
 
 * Note that the [Lightning Quick Start](https://developer.salesforce.com/resource/pdfs/Lightning_QuickStart.pdf) covers some of this material.
 * The Spring '15 Release Notes also have [a great section on Lightning Components](http://docs.releasenotes.salesforce.com/en-us/spring15/release-notes/rn_lightning.htm).  
@@ -15,7 +15,7 @@ Lightning Components have been available in Developer Edition orgs as a beta fea
 
 ###Step 1: Create a developer edition.###
 
-Yes, you should [signup for a new developer edition](https://developer.salesforce.com/signup). You're learning something new, and this walk through won't result in anything particularly useful, so I recommend not muddying the waters.
+Yes, you should [signup for a new developer edition](https://developer.salesforce.com/signup). You're learning something new, and this walk through won't result in anything particularly useful (other than knowledge), so I recommend not muddying the waters in another org.
 
 <a name="enable"></a>
 
@@ -33,7 +33,7 @@ Once enabled, you'll also see a checkbox for enabling debug mode. I didn't use i
 
 What's a namespace? Well, if you've never created a managed package, you might not be familiar with this feature. However, if you've ever seen an object created by an AppExchange app, you might have seen a namespace but not known what you were looking at. 
 
-Namespaces are how Salesforce ensures globally unique names. Going Back to the object example, the namespaced object's API name would be something like MyNamespace__ObjectName__c where "MyNamespace" is, as you might have already guessed, the namespace. In general, namespaces only matters when you package something up for other Salesforce users to use, which is why it's in the setup tree near packages.
+Namespaces are how Salesforce ensures globally unique names. Going back to the object example, the namespaced object's API name would be something like <tt>MyNamespace__ObjectName__c</tt> where <tt>MyNamespace</tt> is, as you might have already guessed, the namespace. Note that yes, that is a double underscore between the namespace and the object API name. In general, namespaces only matters when you package something up for other Salesforce users to use, which is why it's in the setup tree near packages.
 
 Namespaces can only be created in a Developer Edition, and once you create a Namespace, you cannot change it. Stick with something that's easy to remember, and that is obvious enough to remind you why you created it in the first place when you read it. Also you'll be typing it from time to time, so shorter is better.
 
@@ -45,7 +45,7 @@ You can learn more about namespaces in several locations.
 * [Help and Training](https://help.salesforce.com/HTViewHelpDoc?id=register_namespace_prefix.htm&language=en_US)
 * [ISV Force Guide](https://developer.salesforce.com/docs/atlas.en-us.packagingGuide.meta/packagingGuide/register_namespace_prefix.htm)
 
-Start by navigating to Setup > Create > Packages
+Start by navigating to Setup > Create > Packages (or by searching for "packages")
 
 <img src="images/packages-step1.png" width="600px" />
 
@@ -81,7 +81,8 @@ The AuraDocs are a little different than the Salesforce docs you might be used t
 
 <img src="images/lightning-components-auradocs.png" width="600px" />
 
-This is incredibly cool because they aren't just hosted in your org, they're running in your org. That's right: they're an app and they'll update to include the components you build. See the "Reid002" namespace in the screenshot below? Those are the apps, components and events I created while writing this article.
+This is incredibly cool because they aren't just hosted in your org, they're running in your org. That's right: they're an app and they'll update to include the components you build. See the "Reid002" namespace in the screenshot? Those are the apps, components and events I created while writing this article.
 
 Access your live AuraDocs at <tt>https://{YourInstance}.lightning.force.com/auradocs</tt>.
 
+##Next: [Hello Salesforce1](hello-salesforce1.html)##

@@ -34,7 +34,7 @@ Next, create a component to interact with this event.
 <aura:component >
     <aura:registerEvent name="simpleEvent" type="Reid002:SampleLightningEvent1" />
     <aura:handler name="simpleEvent" action="{!c.handleSampleEvent}"/>    
-	<aura:attribute name="setMeOnEventFiring" type="String" default="**nothing fired yet" />
+    <aura:attribute name="setMeOnEventFiring" type="String" default="**nothing fired yet" />
     <h1>Component 8 - Events</h1>
     <p>Create an event and then handle it.</p>
     <p><ui:button label="Click me to fire the event" press="{!c.handleClick}"/></p>
@@ -46,7 +46,7 @@ Notice a few things about this event.
 
 * The <tt>&lt;aura:registerEvent &gt;</tt> tag associates a name <tt>simpleEvent</tt> with a fully qualified event name <tt>Reid002:SampleLightningEvent1</tt>.
 * The <tt>&lt;aura:handler &gt;</tt> associates the simple name with a Javascript function to handle it.
-* The attribute will be updated when the event is fired.
+* The attribute <tt>setMeOnEventFiring</tt> will be updated when the event is fired.
 
 Finally, add the controller code to fire the event as well as handle it.
 
@@ -55,12 +55,14 @@ Finally, add the controller code to fire the event as well as handle it.
     handleClick : function(component, event) {
 		console.log('Controller handle click');
         var compEvent = component.getEvent("simpleEvent");
-        compEvent.setParams({ 'message': 'Clicked! ' + (new Date().toGMTString()) });
+        compEvent.setParams({ 'message': 'Clicked! ' + 
+            (new Date().toGMTString()) });
         compEvent.fire();
     },
     handleSampleEvent : function(component, event, helper) {
 		console.log('Controller handle sample event');        
-		component.set("v.setMeOnEventFiring", "OK I Set It " + event.getParam( 'message'));        
+		component.set("v.setMeOnEventFiring", "OK I Set It " + 
+            event.getParam( 'message'));        
     }
 })
 {% endhighlight %}
@@ -112,10 +114,10 @@ Now let's create the handling component. We do need to specify that it's handlin
 
 {% highlight html %}
 <aura:component >
-    <aura:handler event="Reid002:SampleApplicationEvent" action="{!c.handleSampleEvent}"/>        
-	<aura:attribute name="setMeOnEventFiring" type="String" default="**nothing fired yet" />    
+    <aura:handler event="Reid002:SampleApplicationEvent" action="{!c.handleSampleEvent}"/>
+    <aura:attribute name="setMeOnEventFiring" type="String" default="**nothing fired yet" />
     <h1>Component 8 - Handles Application Event</h1>
-    <p>Anything? {!v.setMeOnEventFiring}</p>	
+    <p>Anything? {!v.setMeOnEventFiring}</p>
 </aura:component>
 {% endhighlight %}
 
@@ -124,7 +126,8 @@ Finally let's add the Javascript to the controller element.
 {% highlight javascript %}
 ({
     handleSampleEvent : function(component, event, helper) {       
-		component.set("v.setMeOnEventFiring", "OK I handled it " + event.getParam( 'message'));        
+        component.set("v.setMeOnEventFiring", 
+            "OK I handled it " + event.getParam( 'message'));        
     }
 })
 {% endhighlight %}
@@ -132,3 +135,5 @@ Finally let's add the Javascript to the controller element.
 Add both the components you just created to your master component, and, when you preview the page and click the button, your screen should look something like this.
 
 <img src="images/lightning-events-application-event.png" width="600px" />
+
+##Next: [Notes](notes.html)##

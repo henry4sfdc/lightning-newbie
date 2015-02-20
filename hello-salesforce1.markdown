@@ -40,7 +40,7 @@ Voila! You have created your first Lightning Application. When you click the pre
 
 <img src="images/lightning-component-simple-app.png" width="600px" />
 
-Next, let's make style it. Select the "Style" element on the right, and replace the default with this CSS.
+Next, let's style it. Select the "Style" element on the right, and replace the default with this CSS.
 
 {% highlight css %}
 .THIS {
@@ -48,7 +48,7 @@ Next, let's make style it. Select the "Style" element on the right, and replace 
 }
 {% endhighlight %}
 
-When you preview again -- and you might have noticed that the preview automatically reloaded -- you'll see this.
+When you preview again -- and you might have noticed that the preview automatically reloaded in your browser -- you'll see this.
 
 <img src="images/lightning-component-simple-app-red.png" width="600px" />
 
@@ -56,7 +56,7 @@ When you preview again -- and you might have noticed that the preview automatica
 
 ##Step 2: Create a Sample Component, Add to the Sample App##
 
-Now, instead of a Lightning Application, let's create a Lightning Component.  In the Developer Console, click File > New > New Ligning Component. The prompt for a new Lightning Bundle looks pretty much the same:
+Now, instead of a Lightning Application, let's create a Lightning Component.  In the Developer Console, click File > New > New Lightning Component. The prompt for a new Lightning Bundle looks pretty much the same:
 
 <img src="images/lightning-component-new-dialog.png" width="300px" />
 
@@ -107,8 +107,6 @@ This lack of change is due to the way CSS works. If you look in your browser's d
 
 Notice how the class representing the app level -- Reid002BlogApp1 -- is the last class listed. CSS resolves conflicts in classes by giving precendence to whatever it sees last.  In this case, it colors everything red. You can indicate that the blue command should be treated as more important using the !important designation. 
 
-You can read more about [CSS Specificity and !Important](http://james.padolsey.com/usability/dont-use-important/).
-
 Try updating the Style for Component1 as follows
 
 {% highlight css %}
@@ -120,6 +118,8 @@ Try updating the Style for Component1 as follows
 Reload the preview and you'll see it worked.
 
 <img src="images/lightning-app-component-1-red-blue.png" width="600px" />
+
+Note that this section ignores a bunch of CSS related details you might be interested in. You can read more about [CSS Specificity and !Important](http://james.padolsey.com/usability/dont-use-important/) if you like.
 
 Now, most people want finer grained control over their CSS, so you might prefer a syntax like this where you limit your color selection to a particular element:
 
@@ -149,7 +149,7 @@ Create a new Lightning Component called BlogComponentMaster, and update the cont
 
 {% highlight html %}
 <aura:component >
-	<h1>Blog Component - Master</h1>
+    <h1>Blog Component - Master</h1>
     <Reid002:BlogComponent1 />
 </aura:component>
 {% endhighlight %}
@@ -175,7 +175,7 @@ Before we can create a tab for the new master component, we need to flag it as "
 
 {% highlight html %}
 <aura:component implements="force:appHostable">
-	<h1>Blog Component - Master</h1>
+    <h1>Blog Component - Master</h1>
     <Reid002:BlogComponent1 />
 </aura:component>
 {% endhighlight %}
@@ -210,4 +210,6 @@ Tap on that menu item, Lightning Blog in my case, and you'll see the components 
 
 <img src="images/lightning-blog-rendered.png" width="300px" />
 
-"HOLY WOW!" I can hear you exclaim. "But, the headline on my Salesforce1 mobile version of Lightning Blog isn't red!" You are correct. The Lightning App we defined and previews on the desktop specified red in its CSS.  However, what you're seeing on your Salesforce1 mobile device, isn't the Lightning App.  It's the Lightning Component we created from the tab, and it has no such specification in its CSS.  Yes, the blue we specified in BlogComponent1, which is itself embedded in BlogComponentMaster, comes through because that CSS is specified at the component level.
+"HOLY WOW!" I can hear you exclaim. "But, the headline on my Salesforce1 mobile version of Lightning Blog isn't red!" You are correct. The Lightning App we defined and previewed on the desktop specified red in its CSS.  However, what you're seeing on your Salesforce1 mobile device, isn't the Lightning App.  It's the Lightning Component we created from the tab, and it has no such specification in its CSS.  Yes, the blue we specified in BlogComponent1, which is itself embedded in BlogComponentMaster, comes through because that CSS is specified at the component level.
+
+##Next: [All About Attributes](attributes.html)##
