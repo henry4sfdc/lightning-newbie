@@ -8,13 +8,13 @@ layout: default
 
 "c" can be a little confusing for me as it can refer to three things.
 
-First, c refers to the javascript controller, as in this light from a component:
+First, c can refer to the javascript controller, as in this line from a component:
 
 {% highlight html %}
 <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
 {% endhighlight %}
 
-Second, c refers to the Apex controller, as in this line from a javascript controller element of a component:
+Second, c can refer to the Apex controller, as in this line from a javascript controller element of a component:
 
 {% highlight javascript %}
 var action = component.get("c.getAccounts"); // name on the apex class
