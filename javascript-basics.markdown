@@ -94,7 +94,7 @@ Next, select the Javascript element on the right, enter the following code and s
 
 When you refresh your preview, you should see the "Click Me" button. Click it to show the list.
 
-<img src="images/lightning-components-user-interface-events.png" width="600px" />
+<img src="images/lightning-components-ui-events.png" width="600px" />
 
 Now you can easily update this sample to be a little more intereting by changing your code as follows.
 
