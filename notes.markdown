@@ -28,7 +28,7 @@ Third, c can also be the default namespace for lightning apps, components and ev
 
 ##Refactoring Visualforce Controllers##
 
-The following code won't compile. The @AuraEnabled annotation doesn't support PageReference return types.
+The following code won't compile. You'll get a handy <tt>Return type does not support AuraEnabled</tt> error because -- wait for it -- the @AuraEnabled annotation doesn't support PageReference return types.
 
 {% highlight java %}
 @AuraEnabled
@@ -44,15 +44,17 @@ You need to refactor your Visualforce controller to have two methods using this 
 
 {% highlight java %}
 public PageReference createMoTester1() {
-    Id newMoTester1 = getNewMoTester1();
-	return new PageReference('/'+newMoTester1);
-}
+    Id myMo = getNewMoTester1Id();
+    return new PageReference('/'+myMo);        
+}    
 
-@AuraEnabled    
-public Id getNewMoTester1() {
+@AuraEnabled
+public Id getNewMoTester1Id() {
     SmartFactory.FillAllFields = true;
     LAB_Mo_Tester_1__c t = (LAB_Mo_Tester_1__c) SmartFactory.createSObject('LAB_Mo_Tester_1__c');
     insert t;  
-    return t.id;
-}    	
+    return t.id;                
+}
 {% endhighlight %}
+
+Note that in this case, based on the way my test classes are structured, this didn't affect my code coverage.  It was 100% before, it's 100% after.
