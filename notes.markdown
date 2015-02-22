@@ -28,6 +28,8 @@ Third, c can also be the default namespace for lightning apps, components and ev
 
 ##Refactoring Visualforce Controllers##
 
+[Original Blog](http://reidcarlberg.com/2015/02/22/refactoring-visualforce-controllers-for-lightning-components/).
+
 The following code won't compile. You'll get a handy <tt>Return type does not support AuraEnabled</tt> error because -- wait for it -- the @AuraEnabled annotation doesn't support PageReference return types.
 
 {% highlight java %}
