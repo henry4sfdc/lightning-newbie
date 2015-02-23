@@ -33,6 +33,7 @@ Third, c can also be the default namespace for lightning apps, components and ev
 {% endhighlight %}
 
 <a name="refactoring" />
+
 ##Refactoring Visualforce Controllers##
 
 [Original Blog](http://reidcarlberg.com/2015/02/22/refactoring-visualforce-controllers-for-lightning-components/).
@@ -69,8 +70,11 @@ public static Id getNewMoTester1Id() {
 Note that in this case, based on the way my test classes are structured, this didn't affect my code coverage.  It was 100% before, it's 100% after.
 
 <a name="typeerror" />
+
 ##TypeError: Cannot read property '$getAction$' of undefined##
 
 Also known as <tt>TypeError: Cannot read property 'ad' of undefined</tt>.
 
-This means the Apex method you're trying to call through your JavaScript controller isn't defeined as "static". 
+Note that your controller may just fail silently unless you have the offending line wrapped in a try catch.
+
+This means the Apex method you're trying to call through your JavaScript controller isn't defeined as "static". Easy way to think about this requirement is to remember that you're never instantiating a controller.
