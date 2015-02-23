@@ -4,6 +4,12 @@ layout: default
 
 #Notes#
 
+* [The Many Meanings of "c"](#c)
+* [Refactoring Visualforce Controllers](#refactoring)
+* [TypeError: Cannot read property 'ad' of undefined](#typeerror)
+
+<a name="c" />
+
 ##"c"##
 
 "c" can be a little confusing for me as it can refer to three things.
@@ -26,6 +32,7 @@ Third, c can also be the default namespace for lightning apps, components and ev
 <c:ContactList/>
 {% endhighlight %}
 
+<a name="refactoring" />
 ##Refactoring Visualforce Controllers##
 
 [Original Blog](http://reidcarlberg.com/2015/02/22/refactoring-visualforce-controllers-for-lightning-components/).
@@ -46,12 +53,12 @@ You need to refactor your Visualforce controller to have two methods using this 
 
 {% highlight java %}
 public PageReference createMoTester1() {
-    Id myMo = getNewMoTester1Id();
+    Id myMo = LAB_CreateDataHelper.getNewMoTester1Id();
     return new PageReference('/'+myMo);        
 }    
 
 @AuraEnabled
-public Id getNewMoTester1Id() {
+public static Id getNewMoTester1Id() {
     SmartFactory.FillAllFields = true;
     LAB_Mo_Tester_1__c t = (LAB_Mo_Tester_1__c) SmartFactory.createSObject('LAB_Mo_Tester_1__c');
     insert t;  
@@ -60,3 +67,10 @@ public Id getNewMoTester1Id() {
 {% endhighlight %}
 
 Note that in this case, based on the way my test classes are structured, this didn't affect my code coverage.  It was 100% before, it's 100% after.
+
+<a name="typeerror" />
+##TypeError: Cannot read property '$getAction$' of undefined##
+
+Also known as <tt>TypeError: Cannot read property 'ad' of undefined</tt>.
+
+This means the Apex method you're trying to call through your JavaScript controller isn't defeined as "static". 
