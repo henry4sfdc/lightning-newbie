@@ -13,7 +13,7 @@ Lightning Components are designed to work with the data in your org. The Apex cl
 
 ##Step 1: Create An Apex Class##
 
-Creating your Apex class is easy. Create a static method with an <tt>@AuraEnabled</tt> annotation and you're good to go.
+Creating your Apex class is easy. Create a static method with an <tt>@AuraEnabled</tt> annotation and you're good to go.  (If you get a "Type Error", see [notes](notes.html#typeerror).
 
 {% highlight java %}
 public class LightningHelper {
