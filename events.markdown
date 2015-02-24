@@ -4,7 +4,7 @@ layout: default
 
 #Events#
 
-**Create and Handle a [Component Event](#component).  Create and Handle an [Application Event](#application).**
+**Create and Handle a [Component Event](#component).  Create and Handle an [Application Event](#application). [force:something events](#forceSomething) **
 
 At the highest level, you will deal with three kinds of events. System events, such as "init" which we covered earlier, component events and application events. Component events operate within a specific component context and application events operate across components.
 
@@ -135,5 +135,45 @@ Finally let's add the Javascript to the controller element.
 Add both the components you just created to your master component, and, when you preview the page and click the button, your screen should look something like this.
 
 <img src="images/lightning-events-application-event.png" width="600px" />
+
+<a name="forceSomething" />
+
+##force:something Namespaced Events##
+
+The [Lightning Component Developer Guide](http://www.salesforce.com/us/developer/docs/lightning/index_Left.htm) includes reference to a number of force: namespaced events (11 of them at this writing).  **These only work in the Salesforce1 app container, and as of Feb 23, 2015, don't work outside of it.**
+
+For example, the component:
+
+{% highlight html %}
+<aura:component implements="force:appHostable">
+    <ui:button label="Test Me" press="{!c.executeTest}" />
+</aura:component>
+{% endhighlight %}
+
+with the controller:
+
+{% highlight javascript %}
+executeTest : function (component, event, helper) {
+    var navEvt = $A.get("e.force:navigateToSObject");
+    navEvt.setParams({
+      "recordId": "001j000000HWkyg",
+      "slideDevName": "related"
+    });
+    navEvt.fire();
+}    
+{% endhighlight %}
+
+...works great when you include it on a Lightning Tab and place it in Salesforce1. 
+
+However, this app definition fails silently.
+
+{% highlight html %}
+<aura:application >
+    <h1>Fails Silently</h1>
+    <ReidFeb23:DemoComp />
+</aura:application>
+{% endhighlight %}
+
+This isn't entirely surprising, but grokking it quickly depends on where you intuit the Magic Line to lie. In this case, the Magic Line divides where the event is handled from where it is not. Salesforce1 handles the event. My little demo app did not.
 
 ##Next: [Notes](notes.html)##
