@@ -4,7 +4,7 @@ layout: default
 
 #Hello Salesforce1#
 
-**Create Your [First Lightning App](#first). Create Your [First Lightning Component](#component) (With [CSS Notes](#css)). [Refactor Your Component](#refactor). Create a [Lightning Component Tab](#tab). Deploy to Your [Salesforce1 Mobile App](#salesforce1)**
+**Create Your [First Lightning App](#first). Create Your [First Lightning Component](#component) (With [CSS Notes](#css)). [Refactor Your Component](#refactor). Create a [Lightning Component Tab](#tab). Deploy to Your [Salesforce1 Mobile App](#salesforce1). Checkout [Mo Tester Sample](#motester).**
 
 Hello World is really two things: Hello World on your desktop browser and Hello World on your Salesforce1 mobile app. The good news is that, by design, these two things are mostly the same. Once you have what you need for your desktop, you only need a few more clicks to make that same component ready for Salesforce1.
 
@@ -211,5 +211,13 @@ Tap on that menu item, Lightning Blog in my case, and you'll see the components 
 <img src="images/lightning-blog-rendered.png" width="300px" />
 
 "HOLY WOW!" I can hear you exclaim. "But, the headline on my Salesforce1 mobile version of Lightning Blog isn't red!" You are correct. The Lightning App we defined and previewed on the desktop specified red in its CSS.  However, what you're seeing on your Salesforce1 mobile device, isn't the Lightning App.  It's the Lightning Component we created from the tab, and it has no such specification in its CSS.  Yes, the blue we specified in BlogComponent1, which is itself embedded in BlogComponentMaster, comes through because that CSS is specified at the component level.
+
+<a name="motester" />
+
+##Check out Mo Tester##
+
+[Mo Tester](https://github.com/ReidCarlberg/LAB-Mo-Tester) is an unmanaged package designed to help you experiment faster on Force.com and with Lightning Components.
+
+<img src="images/motester-feb24.png" width="300px" />
 
 ##Next: [All About Attributes](attributes.html)##
