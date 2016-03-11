@@ -6,9 +6,9 @@ layout: default_home
 
 Like a lot of you, I recently started down the path of learning Lightning Components. These are my notes and code snippets based on a series of questions I asked as I went through the docs and tutorials. I hope you find them useful.
 
-Questions or comments? Find me on Twitter: [@ReidCarlberg](https://twitter.com/ReidCarlberg).
+Questions or comments? Find me on Twitter: [@Henry4sfdc](https://twitter.com/henry4sfdc).
 
-Something you'd like to add or change, or spellinig you'd like to correct? [lightning-newbie](https://github.com/ReidCarlberg/lightning-newbie) is on Github.
+Something you'd like to add or change, or spellinig you'd like to correct? [lightning-newbie](https://github.com/henry4sfdc/lightning-newbie) is on Github.
 
 ##Topics##
 
